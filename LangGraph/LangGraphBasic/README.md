@@ -20,4 +20,18 @@ Unlike standard linear chains, LangGraph allows for the creation of cyclical wor
 1.  **State:** The `QAState` object travels through the graph, holding the `question` and the eventual `answer`.
 2.  **Nodes:** Python functions (`user_input_node`, `answer_node`) that act on the state.
 3.  **Edges:** Define the path. Here: `Start -> get_input -> llm_response -> End`.
+## 📋 Requirements
+
+This project requires **Python 3.9+** and the following libraries:
+
+* **langgraph**: For building the stateful graph workflow.
+* **langchain / langchain-community**: For LLM orchestration.
+* **openai**: To interact with GPT-4o.
+* **httpx**: A dependency for making asynchronous HTTP requests.
+
+### Installation
+Install all dependencies at once using the requirements file:
+
+```bash
+pip install -r requirements.txt
 
